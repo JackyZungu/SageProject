@@ -1,20 +1,29 @@
-<body>
-  
-    <h2>Do you have an Account please login or create an account. </h2>
-    <form action="login" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br />
-        <br />
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link CSS with HTML</title>
+    <link rel="stylesheet" href="StyleSheet2.css">
+</head>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br />
-        <br />
-        <input type="submit" value="Login">
-        <input type="submit" value="Sign Up">
-        <br/>
-        <br/>
-        <input type="submit" value="forgot password">
-</form>
+
+<body>
+    <div class="container">
+        <h1>Do you have an Account? <br> please login or create an account. </h1>
+        <form action="login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" autocomplete="off" required>
+            <br />
+            <label for="password">Password:</label>
+            <input type="password" id="password" autocomplete="off" name="password" required>
+            <br />
+            <input type="submit" class="login" value="Login">
+            <input type="submit" class="signup" value="Sign Up">
+            <br />
+        </form>
+        <p class="no_account">Dont have an account? <a href="">Sign up here!</a></p><a href=""></a>
+    </div>
+
+  
 </body>
+</html>
