@@ -1,1 +1,103 @@
+body {
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+form {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    outline: 1px solid rgba(128, 128, 128, 0.185);
+}
+.container{
+    height: 800px;
+    width: 800px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+}
+
+.signup{
+    font-size: 16px;
+    font-weight: 600;  
+}
+
+
+.no_account{
+    position: relative;
+    top: 10px;
+}
+a{
+    color: blue;
+}
+
+/*Styling the navigation bAR*/
+ul /*The entire nav bar group as a whole, where it is tied*/
+{
+    margin-left:350px;
+}
+
+ul li /*How the individual list items sit and appear inside the webpage*/
+{list-style:none;
+ margin:0;
+ padding:0;
+ display:inline-block;
+ line-height:100px;
+
+
+}
+ul li a /*styling the actual text of the  links*/
+{text-decoration:none;
+ font-size:20px;
+ font-family:'Berlin Sans FB';
+ color: cadetblue;
+ padding:0 25px;
+ display:block;
+}
