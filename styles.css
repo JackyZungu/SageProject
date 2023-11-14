@@ -78,26 +78,3 @@ a{
     color: blue;
 }
 
-/*Styling the navigation bAR*/
-ul /*The entire nav bar group as a whole, where it is tied*/
-{
-    margin-left:350px;
-}
-
-ul li /*How the individual list items sit and appear inside the webpage*/
-{list-style:none;
- margin:0;
- padding:0;
- display:inline-block;
- line-height:100px;
-
-
-}
-ul li a /*styling the actual text of the  links*/
-{text-decoration:none;
- font-size:20px;
- font-family:'Berlin Sans FB';
- color: cadetblue;
- padding:0 25px;
- display:block;
-}
