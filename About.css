@@ -1,1 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+/* Reset some default styles and set a base font-family */
 
+
+/* Style the header */
+header {
+    background-color: burlywood;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the main content section */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Style the footer */
+footer {
+    background-color: burlywood;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    /* Style the horizontal rule in the footer */
+    footer hr {
+        border-color: #0056b3;
+    }
+
+/* Make the table take up 100% width */
+table {
+    width: 100%;
+}
