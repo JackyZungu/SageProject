@@ -115,6 +115,51 @@ nav {
             color: chocolate; 
         }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.homepage-content {
+    position: relative;
+}
+
+h1 {
+    color:black;
+}
+
+p {
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+}
+
+    table td {
+        padding: 15px;
+    }
+
+h3 {
+    color: #333;
+}
+
 
   
 
