@@ -82,7 +82,7 @@ function editBook(index) {
          displayBooks();
      }
  }
-         // Function to clear input fields
+         
  function clearInputFields() {
      document.getElementById('title').value = '';
      document.getElementById('author').value = '';
@@ -90,3 +90,49 @@ function editBook(index) {
      document.getElementById('pubYear').value = '';
      document.getElementById('image').value = '';
  }
+
+
+function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function sendEmail() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    var nameNotificationElement = document.getElementById('nameNotification');
+    if (name === "") {
+        nameNotificationElement.textContent = "Please enter your name.";
+    } else {
+        nameNotificationElement.textContent = "";
+    }
+
+    var emailNotificationElement = document.getElementById('emailNotification');
+    if (email === "") {
+        emailNotificationElement.textContent = "Please enter your email.";
+    } else if (!isValidEmail(email)) {
+        emailNotificationElement.textContent = "Please enter a valid email address.";
+    } else {
+        emailNotificationElement.textContent = "";
+    }
+
+    if (name === "" || email === "" || !isValidEmail(email)) {
+        return;
+    }
+
+    var subject = encodeURIComponent("Message from " + name);
+    var body = encodeURIComponent(message);
+
+    window.location.href = "mailto:moloko4@live.com?subject=" + subject + "&body=" + body;
+
+    var notificationElement = document.getElementById('notification');
+    notificationElement.textContent = "Message sent successfully!";
+
+    document.getElementById('contactForm').reset();
+
+    setTimeout(function () {
+        notificationElement.textContent = "";
+    }, 3000);
+}
