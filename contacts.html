@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SAGE Community Association</title>
+    <link rel="stylesheet" href="contacts.css"/>
+</head>
+<body>
+ <form id="contactForm">
+
+     <label for="name">Name:</label>
+     <input type="text" id="name" name="name" required>
+
+     <div id="nameNotification" class="error-notification"></div>
+
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required>
+
+     <div id="emailNotification" class="error-notification"></div>
+
+     <label for="message">Message:</label>
+     <textarea id="message" name="message" rows="4" required></textarea>
+
+     
+     <div id="notification" class="notification"></div>
+     <button type="button" onclick="sendEmail()">Send</button>
+ </form>
+
+<script>srs="contacts.js" </script>
+</body>
+</html>
