@@ -1,0 +1,56 @@
+*
+{margin:0;
+ padding:0;
+ box-sizing:border-box;
+ list-style:none;
+ text-decoration:none;
+ font-family: sans-serif;
+
+}
+
+.wrapper
+{display:flex;
+ position:relative;
+
+
+}
+
+.wrapper .sideNav
+{
+    position:fixed;
+    width:220px;
+    height:150%;
+    background: #00ff90;
+    padding:40px 0;
+
+}
+
+    .wrapper .sideNav h2
+    {
+    color: brown;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom:30px;
+
+    }
+
+
+    .wrapper .sideNav ul li {
+        padding: 15px;
+        border-bottom: 4px;
+        border-top: 4px solid rgb(225, 225, 225, 0.05 )
+    }
+
+    .wrapper .sideNav ul li a
+    {display:block;
+         color: blue;
+
+
+    }
+
+    .wrapper .sideNav ul li:hover a
+    {color:aquamarine;
+
+
+
+    }
