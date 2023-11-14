@@ -1,1 +1,45 @@
+body{
+background-color:antiquewhite;
 
+}
+/* Updated style for centering and sizing the form */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sideNav {
+    width: 300px; /* Adjust the width of the sideNav */
+    background-color: burlywood;
+    padding: 20px; /* Add padding for better aesthetics */
+    border-radius: 10px; /* Add rounded corners for a nicer look */
+}
+
+h2 {
+    color: #333;
+    text-align: center; /* Center the heading text */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Updated style for the buttons */
+a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+    a:hover {
+        background-color: #bbb;
+    }
