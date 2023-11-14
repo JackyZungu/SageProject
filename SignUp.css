@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: darkgrey;
+    background-color:burlywood;
     color: #333;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ h1 {
     font-weight: bold;
     border:solid;
     border-width: 6px;
-    border-block-color: #0066cc;
+    border-block-color: chocolate;
 }
 
 h2 {
@@ -28,7 +28,7 @@ form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: lightgrey;
+    background-color: cornsilk;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
