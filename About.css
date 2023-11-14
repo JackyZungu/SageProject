@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-image:url('image12.jpg');
     color: #333;
 }
 /* Reset some default styles and set a base font-family */
