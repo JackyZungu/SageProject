@@ -3,6 +3,15 @@ const bookList = document.getElementById('bookList');
 const searchInput = document.getElementById('searchInput');
 const bookInfo = document.getElementById('bookInfo');
 
+function clearBooksData() {
+    localStorage.removeItem('books');
+    alert('Books data has been cleared.');
+    displayBookGenres();
+}
+
+const clearBooksButton = document.getElementById('clearBooksBtn');
+
+clearBooksButton.addEventListener('click', clearBooksData);
 function addBook(event) {
     event.preventDefault(); 
 
