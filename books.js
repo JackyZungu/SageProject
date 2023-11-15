@@ -64,20 +64,32 @@ function displayBookTitles(selectedGenre, books) {
 
     const filteredBooks = selectedGenre ? books.filter(book => book.genre === selectedGenre) : books;
 
-    filteredBooks.forEach(book => {
+    filteredBooks.forEach((book, index) => {
         const titleItem = document.createElement('div');
-        titleItem.textContent = book.title;
+        titleItem.textContent = `${index + 1}. ${book.title}`;
         titleItem.classList.add('bookTitle');
         titleItem.addEventListener('click', () => displayBookDetails(book));
         bookInfo.appendChild(titleItem);
+        bookInfo.appendChild(document.createElement('br'));
     });
 }
 
+
+
 function displayBookDetails(book) {
-    bookInfo.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p><p>Genre: ${book.genre}</p><p>Year of Publication: ${book.pubYear} </p>
-     <img src="${book.image}" alt="${book.title}" width="190" height="200" >
+    const { title, author, genre, pubYear, image } = book;
+    bookInfo.innerHTML = `
+        <p>Title: ${title}</p>
+        <p>Author: ${author}</p>
+        <p>Genre: ${genre}</p>
+        <p>Year of Publication: ${pubYear}</p>
+        <img src="${image}" alt="${title}" width="190" height="200">
+        <button onclick="deleteBook('${title}', '${author}')">Delete</button>
+      
     `;
+    
 }
+
 
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
@@ -98,6 +110,18 @@ bookList.addEventListener('click', (event) => {
         displayBookTitles(selectedGenre, books);
     }
 });
+
+function deleteBook(title, author) {
+    let books = JSON.parse(localStorage.getItem('books')) || [];
+
+    books = books.filter(book =>
+        !(book.title === title && book.author === author)
+    );
+
+    localStorage.setItem('books', JSON.stringify(books));
+    location.reload();
+    displayBookGenres();
+}
 
 function init() {
     displayBookGenres();
