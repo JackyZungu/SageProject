@@ -3,17 +3,12 @@ background-color:antiquewhite;
 
 }
 /* Updated style for centering and sizing the form */
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+
 
 .sideNav {
     width: 300px; /* Adjust the width of the sideNav */
     background-color: burlywood;
-    padding: 20px; /* Add padding for better aesthetics */
+    padding: 50px; /* Add padding for better aesthetics */
     border-radius: 10px; /* Add rounded corners for a nicer look */
 }
 
@@ -43,6 +38,9 @@ a {
     a:hover {
         background-color: #bbb;
     }
+
+
+
 
 
 
