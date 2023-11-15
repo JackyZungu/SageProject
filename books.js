@@ -9,11 +9,13 @@ function addBook(event) {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const genre = document.getElementById('genre').value;
+    const image = document.getElementById('image').value;
 
     const book = {
         title,
         author,
-        genre
+        genre,
+        image
     };
 
     const books = JSON.parse(localStorage.getItem('books')) || [];
@@ -42,7 +44,9 @@ function displayBookTitles(selectedGenre, books) {
 }
 
 function displayBookDetails(book) {
-    bookInfo.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p><p>Genre: ${book.genre}</p>`;
+    bookInfo.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p><p>Genre: ${book.genre}</p>
+     <img src="${book.image}" alt="${book.title}" width="190" height="200" >
+    `;
 }
 
 searchInput.addEventListener('input', () => {
