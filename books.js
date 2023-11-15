@@ -10,12 +10,14 @@ function addBook(event) {
     const author = document.getElementById('author').value;
     const genre = document.getElementById('genre').value;
     const image = document.getElementById('image').value;
+    const pubYear= document.getElementById('pubYear').value;
 
     const book = {
         title,
         author,
         genre,
-        image
+        image,
+        pubYear
     };
 
     const books = JSON.parse(localStorage.getItem('books')) || [];
@@ -44,7 +46,7 @@ function displayBookTitles(selectedGenre, books) {
 }
 
 function displayBookDetails(book) {
-    bookInfo.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p><p>Genre: ${book.genre}</p>
+    bookInfo.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p><p>Genre: ${book.genre}</p><p>Year of Publication: ${book.pubYear} </p>
      <img src="${book.image}" alt="${book.title}" width="190" height="200" >
     `;
 }
