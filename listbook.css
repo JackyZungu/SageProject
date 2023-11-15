@@ -1,1 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: navajowhite;
+    margin: 0;
+    padding: 0;
+}
 
+.addBookForm {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .addBookForm h2 {
+        color: chocolate;
+    }
+
+#addBookForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#addBookForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#addBookForm button {
+    background-color: chocolate;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    #addBookForm button:hover {
+        background-color: sandybrown;
+    }
+
+.wrapper {
+    display: flex;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.sideNav, .books {
+    flex: 1;
+    padding: 20px;
+}
+
+    .sideNav h2, .books h2 {
+        color: chocolate;
+    }
+
+    .sideNav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sideNav li {
+        margin-bottom: 5px;
+    }
+
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#bookInfo {
+    border: 1px solid chocolate;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+}
