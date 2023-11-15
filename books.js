@@ -6,20 +6,22 @@ const bookInfo = document.getElementById('bookInfo');
 function clearBooksData() {
     localStorage.removeItem('books');
     alert('Books data has been cleared.');
+    location.reload();
     displayBookGenres();
 }
 
 const clearBooksButton = document.getElementById('clearBooksBtn');
 
 clearBooksButton.addEventListener('click', clearBooksData);
+
 function addBook(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const genre = document.getElementById('genre').value;
     const image = document.getElementById('image').value;
-    const pubYear= document.getElementById('pubYear').value;
+    const pubYear = document.getElementById('pubYear').value;
 
     const book = {
         title,
@@ -31,14 +33,31 @@ function addBook(event) {
 
     const books = JSON.parse(localStorage.getItem('books')) || [];
 
-    books.push(book);
+    const isBookExists = books.some(
+        existingBook =>
+            existingBook.title === title &&
+            existingBook.author === author &&
+            existingBook.genre === genre &&
+            existingBook.image === image &&
+            existingBook.pubYear === pubYear
+    );
 
-    localStorage.setItem('books', JSON.stringify(books));
+    if (isBookExists) {
+        alert('This book already exists in the list.');
+    }
+
+    else {
+        books.push(book);
+
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+    
 
     addBookForm.reset();
 
     displayBookGenres();
 }
+
 
 function displayBookTitles(selectedGenre, books) {
     bookInfo.innerHTML = '';
