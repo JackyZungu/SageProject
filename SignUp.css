@@ -64,3 +64,23 @@ hr {
     background: #ddd;
     margin-bottom: 20px;
 }
+
+
+
+/* Styling the navigation menu items */
+li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add spacing between list items */
+}
+
+/* Styling the anchor tags (links) */
+a {
+    text-decoration: none; /* Remove underlines from links */
+    color: white; /* Set link color */
+    font-weight: bold; /* Make the text bold */
+}
+
+    /* Change link color on hover */
+    a:hover {
+        color: #ff6600; /* Change to a different color on hover */
+    }
