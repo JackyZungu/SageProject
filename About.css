@@ -43,3 +43,46 @@ footer {
 table {
     width: 100%;
 }
+
+
+    /* Style the table cells */
+    table td {
+        vertical-align: top;
+        padding: 10px;
+    }
+
+/* Style links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+    /* Style links on hover */
+    a:hover {
+        text-decoration: underline;
+    }
+/* Resetting default margin and padding for the list */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the navigation menu items */
+li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add spacing between list items */
+}
+
+/* Styling the anchor tags (links) */
+a {
+    text-decoration: none; /* Remove underlines from links */
+    color: white; /* Set link color */
+    font-weight: bold; /* Make the text bold */
+}
+
+    /* Change link color on hover */
+    a:hover {
+        color: #ff6600; /* Change to a different color on hover */
+    }
+
