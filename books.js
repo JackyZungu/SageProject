@@ -129,11 +129,15 @@ function editBook(title, author) {
     const newTitle = prompt('Enter new title:') || book.title;
     const newAuthor = prompt('Enter new author:') || book.author;
     const newGenre = prompt('Enter new genre:') || book.genre;
+    const newPubYear = prompt('Enter new year of publication:') || book.pubYear;
+    const newImage = prompt('Enter new image URL:') || book.image;
     
 
     book.title = newTitle;
     book.author = newAuthor;
     book.genre = newGenre;
+    book.pubYear = newPubYear;
+    book.image = newImage;
 
 
  
