@@ -10,6 +10,7 @@ The class of 13 people was divided, with 5 people doing HTML,4 people doing CSS,
 upload their progress on the collective account on Github.
 *Create a library system
 *Create a responsive and functional sign up and login
+*Create responsive contact form
 *Add and delete books from the book list
 *Do not allow to add a book that already exists
 *Create and use of an icon
