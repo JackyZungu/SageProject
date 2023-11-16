@@ -2,7 +2,7 @@ const addBookForm = document.getElementById('addBookForm');
 const bookList = document.getElementById('bookList');
 const searchInput = document.getElementById('searchInput');
 const bookInfo = document.getElementById('bookInfo');
-const deleteBook = document.getElementById('deleteBook');
+
 
 function clearBooksData() {
     localStorage.removeItem('books');
