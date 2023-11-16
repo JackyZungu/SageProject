@@ -2,6 +2,7 @@ const addBookForm = document.getElementById('addBookForm');
 const bookList = document.getElementById('bookList');
 const searchInput = document.getElementById('searchInput');
 const bookInfo = document.getElementById('bookInfo');
+const deleteBook = document.getElementById('deleteBook');
 
 function clearBooksData() {
     localStorage.removeItem('books');
@@ -84,12 +85,10 @@ function displayBookDetails(book) {
         <p>Genre: ${genre}</p>
         <p>Year of Publication: ${pubYear}</p>
         <img src="${image}" alt="${title}" width="190" height="200">
+        <button onclick="editBook('${title}', '${author}')">Edit</button>
         <button onclick="deleteBook('${title}', '${author}')">Delete</button>
-      
-    `;
-    
+          `;
 }
-
 
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
@@ -122,6 +121,30 @@ function deleteBook(title, author) {
     location.reload();
     displayBookGenres();
 }
+function editBook(title, author) {
+    const books = JSON.parse(localStorage.getItem('books')) || [];
+    const bookIndex = books.findIndex(book => book.title === title && book.author === author);
+    const book = books[bookIndex];
+
+    const newTitle = prompt('Enter new title:') || book.title;
+    const newAuthor = prompt('Enter new author:') || book.author;
+    const newGenre = prompt('Enter new genre:') || book.genre;
+    const newPubYear = prompt('Enter new year of publication:') || book.pubYear;
+    const newImage = prompt('Enter new image URL:') || book.image;
+
+    book.title = newTitle;
+    book.author = newAuthor;
+    book.genre = newGenre;
+    book.pubYear = newPubYear;
+    book.image = newImage;
+
+ 
+    books[bookIndex] = book;
+    localStorage.setItem('books', JSON.stringify(books));
+
+    displayBookDetails(book);
+    displayBookGenres();
+}  
 
 function init() {
     displayBookGenres();
