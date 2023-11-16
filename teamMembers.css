@@ -28,7 +28,7 @@ nav ul {
                 text-decoration: underline;
             }
 
-#Moloko {
+div {
     background-color: #fff;
     padding: 20px;
     margin: 20px auto;
@@ -37,27 +37,27 @@ nav ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-     h2 {
+    div h2 {
         font-size: 24px;
         margin-bottom: 10px;
     }
 
-     img {
-        max-width: 200px; 
+    div img {
+        max-width: 200px;
         height: auto;
         border-radius: 6px;
         margin-bottom: 15px;
     }
 
-    p {
+    div p {
         margin-bottom: 8px;
     }
 
-     a {
+    div a {
         color: #007bff;
         text-decoration: none;
     }
 
-        a:hover {
+        div a:hover {
             text-decoration: underline;
         }
